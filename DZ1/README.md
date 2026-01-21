@@ -12,13 +12,11 @@ project/
 │   │   ├── __init__.py
 │   │   └── routes/
 │   │       ├── __init__.py
-│   │       └── sample.py
 │   ├── core/
 │   │   ├── __init__.py
 │   │   └── config.py
 │   └── models/
 │       ├── __init__.py
-│       └── sample.py
 ├── tests/
 ├── requirements.txt
 ├── venv/
@@ -63,11 +61,9 @@ uvicorn app.main:app --reload
 
 5. Access the API documentation at `http://localhost:8000/docs`
 
-## Sample Endpoints
+## Endpoints
 
 - `GET /` - Root endpoint
-- `GET /api/v1/sample/` - Get sample data
-- `POST /api/v1/sample/` - Create a sample item
 
 ## Debugging
 

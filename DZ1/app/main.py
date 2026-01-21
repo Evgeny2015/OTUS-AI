@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.api.routes import sample, questions, answers
+from app.api.routes import questions, answers
 from app.core.config import settings
 
 app = FastAPI(
@@ -8,7 +8,6 @@ app = FastAPI(
     version="1.0.0"
 )
 
-app.include_router(sample.router, prefix="/api/v1")
 app.include_router(questions.router, prefix="/api/v1")
 app.include_router(answers.router, prefix="/api/v1")
 
