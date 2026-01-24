@@ -2,3 +2,5 @@
 **/__pycache__/*
 **/venv/*
 **/node_modules/
+**/aspnetcore/*
+/DZ2/aspnetcore/
