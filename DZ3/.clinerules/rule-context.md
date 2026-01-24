@@ -1,0 +1,1 @@
+use project context from @docs/ai/CONTEXT.md file
