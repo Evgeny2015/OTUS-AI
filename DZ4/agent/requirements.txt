@@ -1,0 +1,5 @@
+langchain==1.2.7
+langchain_classic==1.0.1
+langchain-core==1.2.7
+langchain-ollama==1.0.1
+pydantic==2.12.5
