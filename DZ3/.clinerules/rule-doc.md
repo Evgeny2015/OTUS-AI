@@ -1,0 +1,1 @@
+use @docs/ as default output folder for documents
