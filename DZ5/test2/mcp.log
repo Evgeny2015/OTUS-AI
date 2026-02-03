@@ -1,0 +1,5 @@
+2026-02-03 14:10:42,770 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-03 14:10:42,771 - jwt-test-runner - INFO - Generating test coverage with params: include=jwt/*.py, omit=
+2026-02-03 14:11:23,648 - jwt-test-runner - ERROR - Error generating coverage report: No data to report.
+2026-02-03 14:11:23,648 - jwt-test-runner - INFO - Coverage report generated: ['Error generating coverage report: No data to report.']
+2026-02-03 14:11:23,650 - mcp.server.lowlevel.server - INFO - Warning: CoverageWarning: No data was collected. (no-data-collected); see https://coverage.readthedocs.io/en/7.13.2/messages.html#warning-no-data-collected

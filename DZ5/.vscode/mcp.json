@@ -1,0 +1,21 @@
+{
+   "inputs": [],
+   "servers": {
+    "jwt-test-runner-http": {
+      "url": "http://localhost:8000/mcp",
+      "type": "http"
+     },
+    "jwt-test-runner": {
+      "command": "uv",
+      "args": [
+         "run",
+         "--directory",
+         "${workspaceFolder}\\mcp",
+         "jwt_test_runner.py"
+      ],
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+   }
+ }

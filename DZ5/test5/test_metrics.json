@@ -1,0 +1,574 @@
+{
+  "summary": {
+    "total_tests": 0,
+    "passed": 16,
+    "failed": 0,
+    "skipped": 0,
+    "duration": 0,
+    "exit_code": 0,
+    "total": 16,
+    "collected": 16
+  },
+  "trends": [
+    "Trend analysis suggestions:",
+    "- Run tests regularly to track performance over 7 days",
+    "- Monitor test execution time for performance degradation",
+    "- Track failure rates to identify flaky tests",
+    "- Compare test coverage across different time periods"
+  ],
+  "raw_metrics": {
+    "created": 1770129382.9534893,
+    "duration": 56.53156495094299,
+    "exitcode": 0,
+    "root": "C:\\Work\\OTUS\\AI\\DZ5\\jwt",
+    "environment": {},
+    "summary": {
+      "passed": 16,
+      "total": 16,
+      "collected": 16
+    },
+    "collectors": [
+      {
+        "nodeid": "",
+        "outcome": "passed",
+        "result": [
+          {
+            "nodeid": ".",
+            "type": "Dir"
+          }
+        ]
+      },
+      {
+        "nodeid": "simple_test.py",
+        "outcome": "passed",
+        "result": [
+          {
+            "nodeid": "simple_test.py::test_health_check",
+            "type": "Function",
+            "lineno": 39
+          },
+          {
+            "nodeid": "simple_test.py::test_generate_token",
+            "type": "Function",
+            "lineno": 45
+          },
+          {
+            "nodeid": "simple_test.py::test_protected_endpoints",
+            "type": "Function",
+            "lineno": 62
+          },
+          {
+            "nodeid": "simple_test.py::test_invalid_token",
+            "type": "Function",
+            "lineno": 84
+          },
+          {
+            "nodeid": "simple_test.py::test_wrong_credentials",
+            "type": "Function",
+            "lineno": 92
+          }
+        ]
+      },
+      {
+        "nodeid": "test4",
+        "outcome": "passed",
+        "result": []
+      },
+      {
+        "nodeid": "test_client.py",
+        "outcome": "passed",
+        "result": [
+          {
+            "nodeid": "test_client.py::test_health_check",
+            "type": "Function",
+            "lineno": 20
+          },
+          {
+            "nodeid": "test_client.py::test_generate_token",
+            "type": "Function",
+            "lineno": 26
+          },
+          {
+            "nodeid": "test_client.py::test_protected_endpoints",
+            "type": "Function",
+            "lineno": 43
+          },
+          {
+            "nodeid": "test_client.py::test_invalid_token",
+            "type": "Function",
+            "lineno": 65
+          },
+          {
+            "nodeid": "test_client.py::test_wrong_credentials",
+            "type": "Function",
+            "lineno": 73
+          }
+        ]
+      },
+      {
+        "nodeid": "test_jwt_service.py",
+        "outcome": "passed",
+        "result": [
+          {
+            "nodeid": "test_jwt_service.py::test_health_check",
+            "type": "Function",
+            "lineno": 31
+          },
+          {
+            "nodeid": "test_jwt_service.py::test_wrong_credentials",
+            "type": "Function",
+            "lineno": 38
+          },
+          {
+            "nodeid": "test_jwt_service.py::test_generate_token",
+            "type": "Function",
+            "lineno": 47
+          },
+          {
+            "nodeid": "test_jwt_service.py::test_invalid_token",
+            "type": "Function",
+            "lineno": 59
+          },
+          {
+            "nodeid": "test_jwt_service.py::test_protected_endpoints_with_urllib",
+            "type": "Function",
+            "lineno": 77
+          },
+          {
+            "nodeid": "test_jwt_service.py::test_protected_endpoints_with_requests",
+            "type": "Function",
+            "lineno": 103
+          }
+        ]
+      },
+      {
+        "nodeid": ".",
+        "outcome": "passed",
+        "result": [
+          {
+            "nodeid": "simple_test.py",
+            "type": "Module"
+          },
+          {
+            "nodeid": "test4",
+            "type": "Dir"
+          },
+          {
+            "nodeid": "test_client.py",
+            "type": "Module"
+          },
+          {
+            "nodeid": "test_jwt_service.py",
+            "type": "Module"
+          }
+        ]
+      }
+    ],
+    "tests": [
+      {
+        "nodeid": "simple_test.py::test_health_check",
+        "lineno": 39,
+        "outcome": "passed",
+        "keywords": [
+          "test_health_check",
+          "simple_test.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00021689999994123355,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.0385552999996435,
+          "outcome": "passed",
+          "stdout": "Testing health check...\n\n==================================================\nHealth Check\n==================================================\nStatus Code: 200\nResponse: {\n  \"service\": \"JWT Authentication Service\",\n  \"status\": \"running\",\n  \"version\": \"1.0.0\",\n  \"endpoints\": {\n    \"token\": \"POST /token - Generate JWT token\",\n    \"me\": \"GET /users/me - Get current user\",\n    \"protected\": \"GET /protected - Protected endpoint\",\n    \"validate\": \"GET /validate - Validate token\"\n  }\n}\n"
+        },
+        "teardown": {
+          "duration": 0.00019720000000233995,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "simple_test.py::test_generate_token",
+        "lineno": 45,
+        "outcome": "passed",
+        "keywords": [
+          "test_generate_token",
+          "simple_test.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00012760000026901253,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.015144899999541,
+          "outcome": "passed",
+          "stdout": "\nTesting token generation...\n\n==================================================\nToken Generation (Admin)\n==================================================\nStatus Code: 200\nResponse: {\n  \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc3MDEzMTEzMH0.yEy-w75IP_NSxpHroQrFoct2SKwKOAYzwtJ1KLY6w3o\",\n  \"token_type\": \"bearer\",\n  \"expires_in\": 1800\n}\n"
+        },
+        "teardown": {
+          "duration": 0.00028870000005554175,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "simple_test.py::test_protected_endpoints",
+        "lineno": 62,
+        "outcome": "passed",
+        "keywords": [
+          "test_protected_endpoints",
+          "simple_test.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00012880000031145755,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 8.067114600000423,
+          "outcome": "passed",
+          "stdout": "\nTesting token generation...\n\n==================================================\nToken Generation (Admin)\n==================================================\nStatus Code: 200\nResponse: {\n  \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc3MDEzMTEzMn0.Uvh1FhKH0D8H7gOr1_i_-_4lscCtxgcx8f5Zv165cmQ\",\n  \"token_type\": \"bearer\",\n  \"expires_in\": 1800\n}\n\n==================================================\nGet Current User\n==================================================\nStatus Code: 200\nResponse: {\n  \"username\": \"admin\",\n  \"disabled\": false\n}\n\n==================================================\nProtected Endpoint\n==================================================\nStatus Code: 200\nResponse: {\n  \"message\": \"Hello, admin! This is a protected endpoint.\",\n  \"user_info\": {\n    \"username\": \"admin\",\n    \"timestamp\": \"2026-02-03T14:35:36.605132\"\n  }\n}\n\n==================================================\nToken Validation\n==================================================\nStatus Code: 200\nResponse: {\n  \"valid\": true,\n  \"user\": {\n    \"username\": \"admin\",\n    \"authenticated_at\": \"2026-02-03T14:35:38.617124\"\n  }\n}\n"
+        },
+        "teardown": {
+          "duration": 0.0002325000004930189,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "simple_test.py::test_invalid_token",
+        "lineno": 84,
+        "outcome": "passed",
+        "keywords": [
+          "test_invalid_token",
+          "simple_test.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00024649999977555126,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.0100203000001784,
+          "outcome": "passed",
+          "stdout": "\nTesting with invalid token...\n\n==================================================\nInvalid Token Test\n==================================================\nStatus Code: 401\nResponse: {\n  \"detail\": \"Could not validate credentials\"\n}\n"
+        },
+        "teardown": {
+          "duration": 0.0002212999997937004,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "simple_test.py::test_wrong_credentials",
+        "lineno": 92,
+        "outcome": "passed",
+        "keywords": [
+          "test_wrong_credentials",
+          "simple_test.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00015889999940554844,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.013369899999816,
+          "outcome": "passed",
+          "stdout": "\nTesting with wrong credentials...\n\n==================================================\nWrong Credentials Test\n==================================================\nStatus Code: 401\nResponse: {\n  \"detail\": \"Incorrect username or password\"\n}\n"
+        },
+        "teardown": {
+          "duration": 0.0002624000007926952,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_client.py::test_health_check",
+        "lineno": 20,
+        "outcome": "passed",
+        "keywords": [
+          "test_health_check",
+          "test_client.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.0002272000001539709,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.013373699999647,
+          "outcome": "passed",
+          "stdout": "Testing health check...\n\n==================================================\nHealth Check\n==================================================\nStatus Code: 200\nResponse: {\n  \"service\": \"JWT Authentication Service\",\n  \"status\": \"running\",\n  \"version\": \"1.0.0\",\n  \"endpoints\": {\n    \"token\": \"POST /token - Generate JWT token\",\n    \"me\": \"GET /users/me - Get current user\",\n    \"protected\": \"GET /protected - Protected endpoint\",\n    \"validate\": \"GET /validate - Validate token\"\n  }\n}\n"
+        },
+        "teardown": {
+          "duration": 0.0003702000003613648,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_client.py::test_generate_token",
+        "lineno": 26,
+        "outcome": "passed",
+        "keywords": [
+          "test_generate_token",
+          "test_client.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00011349999931553612,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.0202398999999787,
+          "outcome": "passed",
+          "stdout": "\nTesting token generation...\n\n==================================================\nToken Generation (Admin)\n==================================================\nStatus Code: 200\nResponse: {\n  \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc3MDEzMTE0Nn0._x8TZ9itMa1dDDi_AsgRpkouFZ_M5VcmVUTukK5TLkI\",\n  \"token_type\": \"bearer\",\n  \"expires_in\": 1800\n}\n"
+        },
+        "teardown": {
+          "duration": 0.0002871999995477381,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_client.py::test_protected_endpoints",
+        "lineno": 43,
+        "outcome": "passed",
+        "keywords": [
+          "test_protected_endpoints",
+          "test_client.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00018449999970471254,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 8.064138200000343,
+          "outcome": "passed",
+          "stdout": "\nTesting token generation...\n\n==================================================\nToken Generation (Admin)\n==================================================\nStatus Code: 200\nResponse: {\n  \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTc3MDEzMTE0OH0.1ZwSYF4XEcPpcfC5CmurmxMXQ3cNgzt1doymYqpmPbs\",\n  \"token_type\": \"bearer\",\n  \"expires_in\": 1800\n}\n\n==================================================\nGet Current User\n==================================================\nStatus Code: 200\nResponse: {\n  \"username\": \"admin\",\n  \"disabled\": false\n}\n\n==================================================\nProtected Endpoint\n==================================================\nStatus Code: 200\nResponse: {\n  \"message\": \"Hello, admin! This is a protected endpoint.\",\n  \"user_info\": {\n    \"username\": \"admin\",\n    \"timestamp\": \"2026-02-03T14:35:52.731703\"\n  }\n}\n\n==================================================\nToken Validation\n==================================================\nStatus Code: 200\nResponse: {\n  \"valid\": true,\n  \"user\": {\n    \"username\": \"admin\",\n    \"authenticated_at\": \"2026-02-03T14:35:54.745022\"\n  }\n}\n"
+        },
+        "teardown": {
+          "duration": 0.000430199999755132,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_client.py::test_invalid_token",
+        "lineno": 65,
+        "outcome": "passed",
+        "keywords": [
+          "test_invalid_token",
+          "test_client.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.000150299999404524,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.0127118999998856,
+          "outcome": "passed",
+          "stdout": "\nTesting with invalid token...\n\n==================================================\nInvalid Token Test\n==================================================\nStatus Code: 401\nResponse: {\n  \"detail\": \"Could not validate credentials\"\n}\n"
+        },
+        "teardown": {
+          "duration": 0.0003526999998939573,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_client.py::test_wrong_credentials",
+        "lineno": 73,
+        "outcome": "passed",
+        "keywords": [
+          "test_wrong_credentials",
+          "test_client.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00014109999938227702,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.019034300000385,
+          "outcome": "passed",
+          "stdout": "\nTesting with wrong credentials...\n\n==================================================\nWrong Credentials Test\n==================================================\nStatus Code: 401\nResponse: {\n  \"detail\": \"Incorrect username or password\"\n}\n"
+        },
+        "teardown": {
+          "duration": 0.00018650000038178405,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_jwt_service.py::test_health_check",
+        "lineno": 31,
+        "outcome": "passed",
+        "keywords": [
+          "test_health_check",
+          "test_jwt_service.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00027859999954671366,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.0091217999997752,
+          "outcome": "passed"
+        },
+        "teardown": {
+          "duration": 0.0005882999994355487,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_jwt_service.py::test_wrong_credentials",
+        "lineno": 38,
+        "outcome": "passed",
+        "keywords": [
+          "test_wrong_credentials",
+          "test_jwt_service.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00014620000001741573,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.011310899999444,
+          "outcome": "passed"
+        },
+        "teardown": {
+          "duration": 0.0004811000007975963,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_jwt_service.py::test_generate_token",
+        "lineno": 47,
+        "outcome": "passed",
+        "keywords": [
+          "test_generate_token",
+          "test_jwt_service.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00014139999984763563,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.017436699999962,
+          "outcome": "passed"
+        },
+        "teardown": {
+          "duration": 0.0003654000001915847,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_jwt_service.py::test_invalid_token",
+        "lineno": 59,
+        "outcome": "passed",
+        "keywords": [
+          "test_invalid_token",
+          "test_jwt_service.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 0.00014769999961572466,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 2.0074127999996563,
+          "outcome": "passed"
+        },
+        "teardown": {
+          "duration": 0.00017560000014782418,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_jwt_service.py::test_protected_endpoints_with_urllib",
+        "lineno": 77,
+        "outcome": "passed",
+        "keywords": [
+          "test_protected_endpoints_with_urllib",
+          "test_jwt_service.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 2.0193724000000657,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 6.032972699999846,
+          "outcome": "passed"
+        },
+        "teardown": {
+          "duration": 0.0003107999991698307,
+          "outcome": "passed"
+        }
+      },
+      {
+        "nodeid": "test_jwt_service.py::test_protected_endpoints_with_requests",
+        "lineno": 103,
+        "outcome": "passed",
+        "keywords": [
+          "test_protected_endpoints_with_requests",
+          "test_jwt_service.py",
+          "jwt",
+          ""
+        ],
+        "setup": {
+          "duration": 2.0166211000005205,
+          "outcome": "passed"
+        },
+        "call": {
+          "duration": 6.042733000000226,
+          "outcome": "passed"
+        },
+        "teardown": {
+          "duration": 0.000298099999781698,
+          "outcome": "passed"
+        }
+      }
+    ],
+    "warnings": [
+      {
+        "message": "Test functions should return None, but simple_test.py::test_generate_token returned <class 'str'>.\nDid you mean to use `assert` instead of `return`?\nSee https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.",
+        "category": "PytestReturnNotNoneWarning",
+        "when": "runtest",
+        "filename": "C:\\Work\\OTUS\\AI\\DZ5\\mcp\\.venv\\Lib\\site-packages\\_pytest\\python.py",
+        "lineno": 170
+      },
+      {
+        "message": "Test functions should return None, but test_client.py::test_generate_token returned <class 'str'>.\nDid you mean to use `assert` instead of `return`?\nSee https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.",
+        "category": "PytestReturnNotNoneWarning",
+        "when": "runtest",
+        "filename": "C:\\Work\\OTUS\\AI\\DZ5\\mcp\\.venv\\Lib\\site-packages\\_pytest\\python.py",
+        "lineno": 170
+      },
+      {
+        "message": "Test functions should return None, but test_jwt_service.py::test_generate_token returned <class 'str'>.\nDid you mean to use `assert` instead of `return`?\nSee https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.",
+        "category": "PytestReturnNotNoneWarning",
+        "when": "runtest",
+        "filename": "C:\\Work\\OTUS\\AI\\DZ5\\mcp\\.venv\\Lib\\site-packages\\_pytest\\python.py",
+        "lineno": 170
+      }
+    ]
+  },
+  "stdout": "============================= test session starts =============================\nplatform win32 -- Python 3.12.12, pytest-9.0.2, pluggy-1.6.0\nrootdir: C:\\Work\\OTUS\\AI\\DZ5\\jwt\nconfigfile: pyproject.toml\nplugins: anyio-4.12.1, json-report-1.5.0, metadata-3.1.1\ncollected 16 items\n\nsimple_test.py .....                                                     [ 31%]\ntest_client.py .....                                                     [ 62%]\ntest_jwt_service.py ......                                               [100%]\n\n============================== warnings summary ===============================\nsimple_test.py::test_generate_token\n  C:\\Work\\OTUS\\AI\\DZ5\\mcp\\.venv\\Lib\\site-packages\\_pytest\\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but simple_test.py::test_generate_token returned <class 'str'>.\n  Did you mean to use `assert` instead of `return`?\n  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.\n    warnings.warn(\n\ntest_client.py::test_generate_token\n  C:\\Work\\OTUS\\AI\\DZ5\\mcp\\.venv\\Lib\\site-packages\\_pytest\\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but test_client.py::test_generate_token returned <class 'str'>.\n  Did you mean to use `assert` instead of `return`?\n  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.\n    warnings.warn(\n\ntest_jwt_service.py::test_generate_token\n  C:\\Work\\OTUS\\AI\\DZ5\\mcp\\.venv\\Lib\\site-packages\\_pytest\\python.py:170: PytestReturnNotNoneWarning: Test functions should return None, but test_jwt_service.py::test_generate_token returned <class 'str'>.\n  Did you mean to use `assert` instead of `return`?\n  See https://docs.pytest.org/en/stable/how-to/assert.html#return-not-none for more information.\n    warnings.warn(\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n--------------------------------- JSON report ---------------------------------\nreport saved to: metrics.json\n======================= 16 passed, 3 warnings in 56.55s =======================\n",
+  "stderr": "",
+  "command": "pytest --json-report --json-report-file=metrics.json"
+}

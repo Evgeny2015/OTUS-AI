@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "jwt-test-runner": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "fastmcp",
+        "run",
+        "jwt_test_runner.py:mcp"
+      ],
+      "cwd": "${workspaceFolder}\\mcp",
+      "env": {},
+      "disabled": true,
+      "alwaysAllow": []
+    },
+    "jwt-test-runner2": {
+      "type": "streamable-http",
+      "url": "http://localhost:8001/mcp",
+      "headers": {},
+      "disabled": true,
+      "alwaysAllow": []
+    }
+  }
+}
