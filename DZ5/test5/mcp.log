@@ -1,0 +1,14 @@
+2026-02-03 17:49:44,285 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-03 17:49:44,289 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2026-02-03 17:49:44,292 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest
+2026-02-03 17:50:41,361 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-03 17:50:41,362 - jwt-test-runner - INFO - Getting test metrics for 7 days
+2026-02-03 17:51:38,358 - jwt-test-runner - INFO - Result: OK
+2026-02-03 18:53:50,998 - mcp.server.streamable_http_manager - INFO - Created new transport with session ID: e8c9179cc9f7478887874b339d2be30b
+2026-02-03 18:53:51,014 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-03 18:53:51,020 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2026-02-03 18:53:51,025 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest
+2026-02-03 18:53:51,921 - mcp.server.streamable_http_manager - INFO - Created new transport with session ID: 6517e6ef0d1742ac86633ceca35f37ec
+2026-02-03 18:53:51,930 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-03 18:53:51,943 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2026-02-03 18:53:51,948 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest

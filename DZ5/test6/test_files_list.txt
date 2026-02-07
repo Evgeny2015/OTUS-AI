@@ -1,0 +1,19 @@
+Available test files and functions:
+simple_test.py::test_health_check
+simple_test.py::test_generate_token
+simple_test.py::test_protected_endpoints
+simple_test.py::test_invalid_token
+simple_test.py::test_wrong_credentials
+test_client.py::test_health_check
+test_client.py::test_generate_token
+test_client.py::test_protected_endpoints
+test_client.py::test_invalid_token
+test_client.py::test_wrong_credentials
+test_jwt_service.py::test_health_check
+test_jwt_service.py::test_wrong_credentials
+test_jwt_service.py::test_generate_token
+test_jwt_service.py::test_invalid_token
+test_jwt_service.py::test_protected_endpoints_with_urllib
+test_jwt_service.py::test_protected_endpoints_with_requests
+
+16 tests collected
