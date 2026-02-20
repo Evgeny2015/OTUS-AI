@@ -1,0 +1,16 @@
+2026-02-03 14:23:27,310 - mcp.server.streamable_http_manager - INFO - Created new transport with session ID: e1a7eda8f8b347bfbe66ac8e0132bb80
+2026-02-03 14:23:27,323 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-03 14:23:27,330 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2026-02-03 14:23:27,333 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest
+2026-02-03 14:23:50,334 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-03 14:23:50,336 - jwt-test-runner - INFO - Discover and list available test files
+2026-02-03 14:23:50,745 - jwt-test-runner - INFO - Result: OK
+2026-02-03 14:24:23,816 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-03 14:24:23,816 - jwt-test-runner - INFO - Running tests with params: test_path=jwt, markers=, parallel=False
+2026-02-03 14:24:23,851 - jwt-test-runner - INFO - Test run completed with exit code: 1
+2026-02-03 14:25:01,947 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-03 14:25:01,947 - jwt-test-runner - INFO - Running tests with params: test_path=jwt, markers=, parallel=False
+2026-02-03 14:25:01,975 - jwt-test-runner - INFO - Test run completed with exit code: 1
+2026-02-03 14:38:09,763 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-03 14:38:09,763 - jwt-test-runner - INFO - Running tests with params: test_path=jwt, markers=, parallel=False
+2026-02-03 14:38:09,803 - jwt-test-runner - INFO - Test run completed with exit code: 1

@@ -1,0 +1,21 @@
+2026-02-03 11:36:38,651 - jwt-test-runner - INFO - initializing
+2026-02-03 11:36:38,732 - docket.worker - INFO - Starting worker 'DESKTOP-#########' with the following tasks:
+2026-02-03 11:36:38,732 - docket.worker - INFO - * trace(message: str, ...)
+2026-02-03 11:36:38,733 - docket.worker - INFO - * fail(message: str, ...)
+2026-02-03 11:36:38,733 - docket.worker - INFO - * sleep(seconds: float, ...)
+2026-02-03 11:36:38,734 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager started
+2026-02-03 11:36:38,736 - mcp.server.streamable_http_manager - INFO - StreamableHTTP session manager shutting down
+2026-02-03 11:37:20,503 - mcp.server.streamable_http_manager - INFO - Created new transport with session ID: a112304379d74d38a4fb9635e3cd8186
+2026-02-03 11:37:20,511 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-03 11:37:20,516 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2026-02-03 11:37:20,519 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest
+2026-02-03 11:39:13,840 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-03 11:39:13,842 - jwt-test-runner - INFO - Discover and list available test files
+2026-02-03 11:39:14,349 - jwt-test-runner - INFO - Result: OK
+2026-02-03 11:39:29,233 - mcp.server.lowlevel.server - INFO - Processing request of type CallToolRequest
+2026-02-03 11:39:29,234 - jwt-test-runner - INFO - Running tests with params: test_path=jwt/, markers=, parallel=False
+2026-02-03 11:39:29,265 - jwt-test-runner - INFO - Test run completed with exit code: 1
+2026-02-03 11:47:21,565 - mcp.server.streamable_http_manager - INFO - Created new transport with session ID: 4ed3950874d64f7baa4e6ce260ba73e0
+2026-02-03 11:47:21,572 - mcp.server.lowlevel.server - INFO - Processing request of type ListToolsRequest
+2026-02-03 11:47:21,576 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourcesRequest
+2026-02-03 11:47:21,579 - mcp.server.lowlevel.server - INFO - Processing request of type ListResourceTemplatesRequest
