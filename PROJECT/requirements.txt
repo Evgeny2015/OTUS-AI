@@ -1,0 +1,12 @@
+aiofile==3.9.0
+cachetools==7.0.1
+chromadb==1.5.1
+email-validator==2.3.0
+fastmcp==3.0.2
+httptools==0.7.1
+keyring==25.7.0
+langchain==1.2.10
+langchain-community==0.4.1
+ollama==0.6.1
+pip==26.0.1
+pytest==9.0.2
