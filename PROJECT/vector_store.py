@@ -4,10 +4,12 @@ from langchain_core.documents import Document
 from typing import List, Dict, Any
 import os
 
+DEFAULT_PERSIST_DIRECTORY = "./chroma_db"
+
 class VectorStore:
     """ChromaDB vector store wrapper"""
 
-    def __init__(self, persist_directory: str = "./chroma_db"):
+    def __init__(self, persist_directory: str = DEFAULT_PERSIST_DIRECTORY):
         """Initialize the vector store"""
         self.client = chromadb.PersistentClient(
             path=persist_directory,
@@ -31,6 +33,9 @@ class VectorStore:
             documents=contents,
             metadatas=metadatas
         )
+
+        print(f"Added {len(documents)} documents to the vector store")
+        print(f"Total documents in the vector store: {self.collection.count()}")
 
         return {
             "added_count": len(documents),
@@ -58,6 +63,8 @@ class VectorStore:
         """Get statistics about the vector store"""
         count = self.collection.count()
 
+        print(f"Vector store has {count} documents")
+
         # Get all documents to count unique sources
         if count > 0:
             all_docs = self.collection.get()
@@ -74,5 +81,16 @@ class VectorStore:
             "chunk_count": count
         }
 
+    def reset(self) -> bool:
+        """Reset the vector store"""
+        # Delete the existing collection
+        collection_name = self.collection.name
+        self.client.delete_collection(name=collection_name)
+
+        # Create a new collection with the same name
+        self.collection = self.client.create_collection(name=collection_name)
+
+        return True
+
 # Global vector store instance
-vector_store = VectorStore()
+vectorStore = VectorStore()

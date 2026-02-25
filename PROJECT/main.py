@@ -5,7 +5,7 @@ import glob
 from document_loader import load_document
 import ollama
 from rag_pipeline import rag_graph, RAGState
-from vector_store import vector_store
+from vector_store import vectorStore
 
 # Initialize FastMCP
 mcp = FastMCP("RAG Knowledge Base")
@@ -31,14 +31,18 @@ async def index_folder(folder_path: str, glob_pattern: str = "**/*"):
     total_documents = 0
     indexed_files = 0
 
+    print(f"Found {len(file_paths)} files to index")
+
     # Process each file
     for file_path in file_paths:
         try:
             # Load the document
             documents = load_document(file_path)
 
+            print(f"Indexing file {file_path} with {len(documents)} chunks")
+
             # Add to vector store
-            result = vector_store.add_documents(documents)
+            result = vectorStore.add_documents(documents)
             total_documents += result["added_count"]
             indexed_files += 1
 
@@ -96,7 +100,7 @@ async def ask_question(question: str):
 async def find_relevant_docs(query: str, top_k: int = 5):
     """Find relevant documents for a query"""
     # Search for relevant documents
-    documents = vector_store.search(query, n_results=top_k)
+    documents = vectorStore.search(query, n_results=top_k)
 
     # Convert documents to serializable format
     docs_list = []
@@ -151,7 +155,7 @@ async def summarize_document(file_path: str):
 async def index_status():
     """Get the status of the index"""
     # Get statistics from vector store
-    stats = vector_store.get_stats()
+    stats = vectorStore.get_stats()
     return {
         "file_count": stats["file_count"],
         "chunk_count": stats["chunk_count"],

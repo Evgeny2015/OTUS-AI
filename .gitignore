@@ -5,3 +5,4 @@
 **/node_modules/
 **/aspnetcore/*
 /DZ2/aspnetcore/
+**/chroma_db/*

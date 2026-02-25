@@ -1,6 +1,6 @@
 import os
 import ollama
-from vector_store import vector_store
+from vector_store import vectorStore
 from typing import List, Dict, Any
 from langchain_core.documents import Document
 from pydantic import BaseModel, Field
@@ -53,7 +53,7 @@ def retrieve_documents(state: RAGState) -> Dict[str, Any]:
     """Retrieve documents based on the query"""
     # Use the vector store to retrieve relevant documents
     try:
-        documents = vector_store.search(state.rewritten_query, n_results=10)
+        documents = vectorStore.search(state.rewritten_query, n_results=10)
     except Exception:
         # If retrieval fails, return empty list
         documents = []
