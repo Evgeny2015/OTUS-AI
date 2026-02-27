@@ -27,6 +27,8 @@ def load_document(file_path: str) -> List[Document]:
         return load_typescript(file_path)
     elif file_extension == '.json':
         return load_json(file_path)
+    elif file_extension == '.jsonl':
+        return load_jsonl(file_path)
     elif file_extension == '.yaml' or file_extension == '.yml':
         return load_yaml(file_path)
     else:
@@ -160,3 +162,27 @@ def load_yaml(file_path: str) -> List[Document]:
     )
 
     return [doc]
+
+def load_jsonl(file_path: str) -> List[Document]:
+    """Load a JSONL (JSON Lines) file"""
+    documents = []
+
+    with open(file_path, 'r', encoding='utf-8') as f:
+        for line_num, line in enumerate(f, 1):
+            line = line.strip()
+            if not line:
+                continue
+
+            try:
+                data = json.loads(line)
+                # Convert to string and treat as text
+                content = json.dumps(data, indent=2)
+                doc = Document(
+                    page_content=content,
+                    metadata={"source": file_path, "type": "jsonl", "line": line_num}
+                )
+                documents.append(doc)
+            except json.JSONDecodeError as e:
+                raise ValueError(f"Invalid JSON on line {line_num}: {e}")
+
+    return documents
