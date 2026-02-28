@@ -10,13 +10,13 @@ def test_rag_state_creation():
         graded_documents=[],
         generation="",
         sources=[],
-        retry_count=0,
+        query_retry_count=0,
         is_grounded=False
     )
 
     assert state.question == "What is Python?"
     assert state.rewritten_query == "Python programming language"
-    assert state.retry_count == 0
+    assert state.query_retry_count == 0
 
 def test_graph_creation():
     """Test creating the RAG graph"""
@@ -34,7 +34,7 @@ def test_rewrite_query_node():
         graded_documents=[],
         generation="",
         sources=[],
-        retry_count=0,
+        query_retry_count=0,
         is_grounded=False
     )
 
@@ -60,7 +60,7 @@ def test_grade_documents_node():
         graded_documents=[],
         generation="",
         sources=[],
-        retry_count=0,
+        query_retry_count=0,
         is_grounded=False
     )
 
@@ -80,7 +80,7 @@ def test_hallucination_check_node():
         graded_documents=[],
         generation="Python is a programming language",
         sources=[],
-        retry_count=0,
+        query_retry_count=0,
         is_grounded=False
     )
 

@@ -4,7 +4,7 @@ from fastmcp import FastMCP
 import glob
 from document_loader import load_document
 import ollama
-from rag_pipeline import rag_graph, RAGState
+from rag_pipeline import rag_graph, RAGState, DEFAULT_OLLAMA_MODEL
 from vector_store import vectorStore
 
 # Initialize FastMCP
@@ -71,7 +71,8 @@ async def ask_question(question: str):
         graded_documents=[],
         generation="",
         sources=[],
-        retry_count=0,
+        query_retry_count=0,
+        answer_retry_count=0,
         is_grounded=False
     )
 
@@ -80,7 +81,7 @@ async def ask_question(question: str):
 
     # Extract sources from graded documents
     sources = []
-    for doc in final_state.graded_documents:
+    for doc in final_state["graded_documents"]:
         if 'source' in doc.metadata:
             sources.append(doc.metadata['source'])
 
@@ -88,9 +89,9 @@ async def ask_question(question: str):
     sources = list(set(sources))
 
     return {
-        "answer": final_state.generation,
+        "answer": final_state["generation"],
         "sources": sources,
-        "is_grounded": final_state.is_grounded
+        "is_grounded": final_state["is_grounded"]
     }
 
 @mcp.tool(
@@ -131,7 +132,7 @@ async def summarize_document(file_path: str):
     # Use Ollama to generate a summary
     try:
         response = ollama.generate(
-            model="llama3",
+            model=DEFAULT_OLLAMA_MODEL,
             prompt=f"Please summarize the following document:\n\n{full_text[:4000]}",
             options={
                 "temperature": 0.7,
