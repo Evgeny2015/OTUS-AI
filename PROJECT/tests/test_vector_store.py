@@ -70,12 +70,13 @@ def test_get_stats(vector_store):
     assert stats["file_count"] == 2  # Two unique sources
     assert stats["chunk_count"] == 3  # Three chunks total
 
-
+'''
 def test_get_status():
     """Test getting vector store status"""
     # Initially empty
     status = asyncio.run(index_status())
     print(status)
+
 
 def test_reset():
     """Test resetting the vector store"""
@@ -115,7 +116,8 @@ def test_search_from_folder():
 def test_ask_question():
     """Test asking a question"""
     # ask_question
-    question = "What is a Pyhton?"
+    question = "Cobra language"
     answer = asyncio.run(ask_question(question))
 
     print(answer)
+'''

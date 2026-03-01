@@ -1,0 +1,30 @@
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+    entrypoint:
+      - /bin/bash
+      - -c
+      - |
+        ollama serve &
+        ollama pull qwen2.5:3b
+        wait
+
+  server:
+    build: .
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/app
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+
+volumes:
+  ollama:

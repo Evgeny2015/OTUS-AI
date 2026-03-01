@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "MyBase": {
+      "url": "http://localhost:8001/mcp",
+      "type": "streamable-http",
+      "disabledTools": [],
+      "alwaysAllow": [
+        "ask_question",
+        "find_relevant_docs",
+        "index_status"
+      ],
+      "timeout": 300
+    }
+  }
+}
