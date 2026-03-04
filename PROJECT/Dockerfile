@@ -10,4 +10,4 @@ COPY . .
 
 EXPOSE 8001
 
-CMD ["fastmcp", "run", "main.py", "--transport", "http", "--port", "8001"]
+CMD ["fastmcp", "run", "main.py:mcp", "--transport", "http", "--port", "8001"]

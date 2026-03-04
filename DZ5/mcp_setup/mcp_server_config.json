@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "jwt-test-runner": {
+      "command": "uv",
+      "args": ["run", "jwt-test-runner"],
+      "env": {
+        "PYTHONPATH": "."
+      },
+      "disabled": false,
+      "alwaysAllow": [],
+      "disabledTools": []
+    }
+  }
+}
