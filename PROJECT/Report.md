@@ -13,7 +13,7 @@ py -3.12 -m venv .env
 
 ## ollama
 
-* used qwen2.5-coder:1.5b
+* used qwen2.5:3b
 
 ## sample docs
 Used https://huggingface.co/datasets/databricks/databricks-dolly-15k cuted to 3000 lines

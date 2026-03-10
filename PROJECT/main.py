@@ -1,6 +1,8 @@
 import os
 import asyncio
 from fastmcp import FastMCP
+from starlette.middleware import Middleware
+from starlette.middleware.cors import CORSMiddleware
 import glob
 from document_loader import load_document
 import ollama
@@ -9,6 +11,16 @@ from vector_store import vectorStore
 
 # Initialize FastMCP
 mcp = FastMCP("RAG Knowledge Base")
+
+# Middleware
+middleware = [
+    Middleware(
+        CORSMiddleware,
+        allow_origins=["*"],
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
+]
 
 # Environment variables
 OLLAMA_HOST = os.getenv("OLLAMA_HOST", "http://localhost:11434")
@@ -164,4 +176,5 @@ async def index_status():
     }
 
 if __name__ == "__main__":
-    mcp.run()
+    # mcp.run()
+    mcp.http_app(middleware=middleware)

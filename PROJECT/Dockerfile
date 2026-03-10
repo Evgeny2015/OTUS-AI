@@ -3,10 +3,11 @@ FROM python:3.12-slim
 WORKDIR /app
 
 COPY requirements.txt .
-COPY chroma_db/* .
 RUN pip install -r requirements.txt
 
 COPY . .
+
+RUN python -c "import asyncio; from main import index_folder; asyncio.run(index_folder('./sample_docs'))"
 
 EXPOSE 8001
 
