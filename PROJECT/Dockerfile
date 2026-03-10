@@ -11,4 +11,4 @@ RUN python -c "import asyncio; from main import index_folder; asyncio.run(index_
 
 EXPOSE 8001
 
-CMD ["fastmcp", "run", "main.py:mcp", "--transport", "http", "--port", "8001"]
+CMD ["fastmcp", "run", "main.py:mcp", "--transport", "http", "--host", "0.0.0.0", "--port", "8001"]
