@@ -7,6 +7,8 @@ services:
     volumes:
       - ollama:/root/.ollama
     restart: unless-stopped
+    networks:
+      - networkName
     entrypoint:
       - /bin/sh
       - -c
@@ -31,7 +33,13 @@ services:
     depends_on:
       - ollama
     environment:
-      - OLLAMA_HOST=http://localhost:11434
+      - OLLAMA_HOST=http://ollama:11434
+    networks:
+      - networkName
 
 volumes:
   ollama:
+
+networks:
+  networkName:
+    driver: bridge
